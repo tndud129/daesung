@@ -1,0 +1,73 @@
+
+.flex-type01{display: flex; justify-content: space-between;}
+.flex-type02{display: flex; justify-content: flex-start;}
+.flex-type03{display: flex; justify-content: flex-end;}
+.blind{position: absolute; left: -9999px; font-size: 0;}
+
+/* Common */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul,ol,li{list-style: none;}
+a{color: #333; text-decoration: none; cursor: pointer;}
+a:link, a:hover, a:active, a:focus {text-decoration: none; cursor: pointer; color: #555;}
+html{font-size: 10px; overflow-y: scroll;}
+body{overflow-x: hidden; word-break: keep-all; color: #333; font-size: 1.3rem; font-family: "Noto Sans KR-Light", sans-serif;}
+
+input, textarea, button, select{
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+@font-face {
+    font-family: "Noto Sans KR-Regular";
+    font-weight: normal;
+    font-style: normal;
+    src: url(font/NotoSansKR-Regular.ttf);
+}
+@font-face {
+    font-family: "Noto Sans KR-Bold";
+    font-weight: bold;
+    font-style: normal;
+    src: url(font/NotoSansKR-Bold.ttf);
+}
+@font-face {
+    font-family: "NotoSansKR-Light";
+    font-weight: light;
+    font-style: normal;
+    src: url(font/NotoSansKR-Light.ttf);
+}
+
+h1{font-size: 2em;}
+h2{font-size: 1.5em;}
+h3{font-size: 1.17em;}
+h4{font-size: 1em;}
+h5{font-size: 0.83em;}
+h6{font-size: 0.67em;}
+img{border: 0 none; max-width: 100%;}
+img, input, select, textarea{vertical-align: middle;}
+button, label{cursor: pointer; border:  none; padding: 0;}
+
+
+
+
+
+/* button */
+.button-expand { display: inline-flex; align-items: center; position: relative; padding: 0 70px 0 24px; line-height: 50px; height: 50px; font-size: 16px; font-weight: 400; color: #151515; background: #fff; border: 1px solid #DDDDDD; border-radius: 100px; }
+.button-expand .circle { display: flex; align-items: center; justify-content: space-between; position: absolute; top: -1px; right: -1px; bottom: -1px; left: -1px; padding: 0 18px 0 24px; color: #fff; white-space: nowrap; background: #097CD3; border-radius: 100px; transition: clip-path .35s cubic-bezier(.785,.135,.15,.86), transform .35s cubic-bezier(.785,.135,.15,.86); clip-path: inset(8px 8px 8px calc(100% - 44px) round 36px); }
+.button-expand .circle svg { overflow: hidden; width: 13px; height: 13px; }
+.button-expand .circle path { fill: currentColor; transition: transform .35s cubic-bezier(.785,.135,.15,.86); }
+.button-expand .circle path:first-child { transition-delay: .1s; }
+.button-expand .circle path:last-child { transform: translateX(-100%); transition-delay: 0s; }
+.button-expand-light { color: #fff; background: transparent; border-color: #fff; }
+.button-expand-light .circle { color: #333; background: #fff; }
+
+@media (hover: hover) and (pointer: fine) {
+    .button-expand:hover .circle { clip-path: inset(0 round 50px); }
+    .button-expand:hover .circle path:first-child { transform: translateX(100%); transition-delay: 0s; }
+    .button-expand:hover .circle path:last-child { transform: translateX(0); transition-delay: .1s; }
+
+    .button-more-expand:hover .icon { clip-path: circle(150% at calc(100% - 26px) 50%); }
+}

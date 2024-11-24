@@ -1,0 +1,91 @@
+@import url(layout.css);
+
+/* 자주사용되는 css */
+.center {max-width: 1400px; margin: 0 auto; position: relative;}
+.center_head{max-width: 1700px; margin: 0 auto; position: relative;}
+.flex_fixing01 {display: flex; justify-content: space-between;}
+.flex_fixing02 {display: flex; justify-content: flex-end;}
+.flex_fixing03 {display: flex; justify-content: flex-start;}
+.layout_fixing01 {display: flex; justify-content: center;}
+
+
+/* 서브_공통헤더 */
+#head{background: #33333325;}
+.head_inner_pc .head_logo a{background: url("../images/logo_w.svg") no-repeat center;}
+.language .lang_box .lang_list a:hover{background-color: rgba(255,255,255,0.8); color: #111;}
+@media (max-width:1100px) {
+    #t_head{background: #33333325;}
+    .t_head_inner .head_logo a{background: url("../images/logo_w.svg") no-repeat center;}
+}
+
+
+/* main */
+#main{width: 100%; position: relative;}
+#main .img_bg{width: 100%; z-index: -1;}
+#main .img_bg img{width: 100%; height: 600px; object-fit: cover;}
+
+#main .sub_main_txt{width: 100%; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
+#main .sub_main_txt .main_inner{padding: 0 20px;}
+#main .sub_main_txt .main_inner h1{color: #fff;
+    font-size: 4rem; font-weight: 600;}
+#main .snb{width: 100%; position: absolute; left: 0; bottom: 0; padding: 0 20px;}
+#main .snb .sub_inner{height: 80px; background-color: #fff; border-bottom: 1px solid #d1d1d1; }
+#main .snb .sub_inner ul{display: flex; align-items: center; justify-content: space-between;
+    height: 100%;
+}
+#main .snb .sub_inner ul li{text-align: center; width: calc(100% / 2); 
+    position: relative;}
+#main .snb .sub_inner ul li::after{content: ""; position: absolute; top: 50%; right: 0; width: 1px; height: 50px;
+    transform: translateY(-50%); background-color: #d1d1d1;}
+#main .snb .sub_inner ul li a{display: block; width: 100%; height: 80px; 
+    line-height: 80px; font-size: 1.8rem; overflow: hidden; word-break: break-word; 
+    display: -webkit-box; 
+    -webkit-line-clamp: 2; -webkit-box-orient: vertical}
+#main .snb .sub_inner ul li:nth-child(1) a{ border-bottom: 1px solid #d12a25;}
+#main .snb .sub_inner ul li a:hover{color: #333;}
+@media (max-width:1100px){
+    .show{display: block;}
+    .show::after{display: none;}
+}
+
+/* sub2_box1 */
+.sub2_box1{width: 100%;}
+.sub2_box1_inner{padding: 0 20px;}
+.sub2_box1_inner .sub2_box1_text h2{font-size: 4rem; font-weight:500; color: #333; margin-top: 15.5rem;}
+.sub2_box1_inner .sub2_box1_text h2 strong{font-weight: 700; color: #111; margin-top: 10rem;}
+.sub2_box1_inner .sub2_box1_text h1{font-weight: 700; font-size: 6.2rem; color: #cc0000; margin-top: 10rem;}
+.sub2_box1_inner .sub2_box1_text p{font-size: 3.2rem; color: #999; margin-top: 10rem;}
+
+.sub2_box1_inner .sub2_box1_img{width: 80%; margin: 0 auto;}
+
+.sub2_box1_down_text2{width: 100%; height: 45rem; position: relative;}
+.sub2_box1_down_text2 img{width: 100%; height: 100%; object-fit: cover;}
+
+.sub2_box1_down_inner{position: absolute; padding: 20px;
+    width: 100%; height: 100%; top:0; text-align: center; color: #fff}
+.sub2_box1_down_inner h1{font-size: 6.2rem; font-weight: 700; margin-top: 8rem;}
+.sub2_box1_down_inner p{font-size: 2.1rem; font-weight: 500; margin-top: 4rem;}
+.sub2_box1_down_inner a{background: #fff; width: 21rem; height: 6rem;
+    display: block; margin: 40px auto 0; line-height: 6rem; font-size: 2.1rem;}
+
+.sub2_box1_down_inner a:hover{background-color: #cc0000; color: #fff;}
+
+@media (max-width:1100px){
+    .sub2_box1_inner .sub2_box1_text h2{font-size: 2.3rem;}
+    .sub2_box1_inner .sub2_box1_text h1{font-size: 3.6rem;}
+    .sub2_box1_inner .sub2_box1_text p{font-size: 2.1rem;}
+
+    .sub2_box1_down_inner h1{font-size: 4.2rem;}
+    .sub2_box1_down_inner p{font-size: 2.1rem; margin-top: 2rem;}
+    .sub2_box1_down_inner a{width: 18rem; font-size: 1.8rem;}
+}
+
+@media (max-width:420px){
+    .sub2_box1_inner .sub2_box1_text h2{font-size: 2.1rem; margin-top: 6rem;}
+    .sub2_box1_inner .sub2_box1_text h1{font-size: 2.8rem; margin-top: 4rem;}
+    .sub2_box1_inner .sub2_box1_text p{font-size: 1.8rem; margin-top: 4rem; margin-bottom: 4rem;}
+
+    .sub2_box1_down_inner h1{font-size: 3rem; margin-top: 12rem;}
+    .sub2_box1_down_inner p{font-size: 1.6rem; margin-top: 2rem;}
+    .sub2_box1_down_inner a{width: 18rem; font-size: 1.6rem;}
+}
